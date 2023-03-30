@@ -1,5 +1,5 @@
 const bugmenu =  ` 
-*By SANDARU-YT*
+*Warning Bugs Are Very Dangerous*
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 *Bug Commands*
 ┏━━⊱
