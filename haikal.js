@@ -1959,14 +1959,14 @@ break
 case 'public': {
 if (!isCreator) return m.reply(mess.owner)
 haikal.public = true
-m.reply('Sukse Change To Public')
+m.reply('Changed To Public')
 }
 break
 //=================================================//
 case 'self': {
 if (!isCreator) return m.reply(mess.owner)
 haikal.public = false
-m.reply('Sukses Change To Self')
+m.reply('Changed To Self')
 }
 break
 case 'listcmd': {
@@ -1988,12 +1988,12 @@ if (args.length < 1) return m.reply('ketik on untuk mengaktifkan\nketik off untu
 if (args[0] === "on") {
 if (AntiLink) return m.reply('Sudah Aktif')
 ntilink.push(from)
-m.reply('Succes menyalakan antilink di group ini 🌷')
+m.reply('Succes')
 } else if (args[0] === "off") {
 if (!AntiLink) return m.reply('Sudah Mati')
 let off = ntilink.indexOf(from)
 ntilink.splice(off, 1)
-m.reply('Succes mematikan antilink di group ini 🌷')
+m.reply('Succes')
 } else {
 m.reply('on untuk mengaktifkan, off untuk menonaktifkan')
 }
@@ -2215,7 +2215,7 @@ Total Pengguna Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
 Runtime Bot : ${runtime(process.uptime())}
 
-*ʙᴏᴛ ʜᴡ ᴍᴏᴅꜱ ᴡᴀ ᴠ16*
+*BY SANDARU*
 ┏━━⊱
 ┣❏ʟɪꜱᴛᴀᴅᴍɪɴ
 ┣❏ʟɪꜱᴛᴀᴜᴅɪᴏ
@@ -2239,7 +2239,7 @@ haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/ec4ecf8a4778
 Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
 
-*ʙᴏᴛ ʜᴡ ᴍᴏᴅꜱ ᴡᴀ ᴠ16*
+*BY SANDARU*
 ┏━━⊱
 ┣❏ᴋɪᴄᴋ (628xxx)
 ┣❏ᴀᴅᴅ (628xxx)
@@ -2434,7 +2434,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 ◎ Terbit : *01-09-1999*
 
 SILAHKAN KETIK MENU UNTUK MENGGUNAKAN BOT LEBIH LANJUT ✌️`,
-"currencyCode": "IDR",
+"currencyCode": "USD",
 "footerText": ` `,
 "priceAmount1000": "10000000",
 "productImageCount": 1,
@@ -2492,7 +2492,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 ◎ Terbit : *01-09-1999*
 
 SILAHKAN KETIK MENU UNTUK MENGGUNAKAN BOT LEBIH LANJUT ✌️`,
-"currencyCode": "IDR",
+"currencyCode": "USD",
 "footerText": ` `,
 "priceAmount1000": "10000000",
 "productImageCount": 1,
