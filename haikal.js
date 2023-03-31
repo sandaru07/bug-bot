@@ -2001,13 +2001,13 @@ m.reply('on untuk mengaktifkan, off untuk menonaktifkan')
 break
 case 'addprem':
 if (!isCreator) return m.reply(mess.owner)
-if (!args[0]) return m.reply(`Penggunaan ${prefix+command} nomor\nContoh ${prefix+command} 6281214281312`)
+if (!args[0]) return m.reply(`Premium Not Set ${prefix+command} Ex: ${prefix+command} 947644970xx`)
 bnnd = q.split("|")[0].replace(/[^0-9]/g, '')
 let ceknye = await haikal.onWhatsApp(bnnd + `@s.whatsapp.net`)
 if (ceknye.length == 0) return m.reply(`Masukkan Nomor Yang Valid Dan Terdaftar Di WhatsApp!!!`)
 owner.push(bnnd)
 fs.writeFileSync('./database/owner.json', JSON.stringify(owner))
-m.reply(`Nomor ${bnnd} Telah Sudah Premium!!!`)
+m.reply(`SUCCESS`)
 break
 case 'delprem':
 if (!isCreator) return m.reply(mess.owner)
@@ -2034,9 +2034,9 @@ haikal.sendContact(from, global.owner, m)
 break
 case 'welcome': {
 if (!isCreator) return m.reply(mess.owner)
-if (!m.isGroup) return m.reply('khusus group')
+if (!m.isGroup) return m.reply('Group')
 if (args[0] === "on") {
-if (welcm) return m.reply('Sudah Aktif')
+if (welcm) return m.reply('Activated')
 wlcm.push(from)
 var groupe = await haikal.groupMetadata(from)
 var members = groupe['participants']
@@ -2044,12 +2044,12 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-haikal.sendMessage(from, {text: `Fitur Welcome Di Aktifkan Di Group Ini`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+haikal.sendMessage(from, {text: `The welcome feature is activated in this group`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!welcm) return m.reply('Sudah Non Aktif')
+if (!welcm) return m.reply('DIactivated')
 let off = wlcm.indexOf(from)
 wlcm.splice(off, 1)
-m.reply('Sukses Mematikan Welcome  di group ini')
+m.reply('Deadly Success Welcome to this group')
 } else {
 haikal.sendMessage(m.chat, { image: ppnyauser, caption: ` Silahkan Ketik
 Welcome on
@@ -2110,7 +2110,7 @@ ${bugmenu}` }, { quoted: m })
 }
 break
 case 'allmenu': {
-haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/b9485a8f0d40f99590134.jpg' }, caption: `command : ${prefix}
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/ec4ecf8a47786c825cacd.jpg' }, caption: `command : ${prefix}
 Total Pengguna Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
 Runtime Bot : ${runtime(process.uptime())}
@@ -2150,69 +2150,67 @@ kuismath impossible2` }, { quoted: m })
 }
 break
 case 'downloadmenu': {
-haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/0aa0de71e866b3e9393ea.jpg' }, caption: `command : ${prefix}
-Total Pengguna Premium :  ${owner.length}
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/ec4ecf8a47786c825cacd.jpg' }, caption: `command : ${prefix}
+Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
-Runtime Bot : ${runtime(process.uptime())}
 
-*ʙᴏᴛ ʜᴡ ᴍᴏᴅꜱ ᴡᴀ ᴠ16*
+*B Y   S A N D A R U*
 ┏━━⊱
-┣❏ꜰʙᴠɪᴅᴇᴏ (ʟɪɴᴋɴʏᴀ)
-┣❏ɪɢᴠɪᴅᴇᴏ (ʟɪɴᴋɴʏᴀ)
-┣❏ᴛᴡɪᴛᴠɪᴅᴇᴏ (ʟɪɴᴋɴʏᴀ)
-┣❏ᴍᴇᴅɪᴀꜰɪʀᴇ (ʟɪɴᴋɴʏᴀ)
-┣❏ᴛɪᴋᴛᴏᴋᴠɪᴅᴇᴏ (ʟɪɴᴋɴʏᴀ)
-┣❏ᴛɪᴋᴛᴏᴋᴀᴜᴅɪᴏ (ʟɪɴᴋɴʏᴀ)
-┣❏ᴘʟᴀʏ (ᴛᴇxᴛɴʏᴀ)
-┣❏ꜱᴍᴇᴍᴇ (ɢᴀᴍʙᴀʀɴʏᴀ)
-┣❏ʏᴛᴍᴘ4 (ʟɪɴᴋɴʏᴀ)
-┣❏ʏᴛᴍᴘ3 (ʟɪɴᴋɴʏᴀ)
-┣❏ᴘɪɴᴛᴇʀᴇꜱᴛ (ᴛᴇxᴛɴʏᴀ)
+┣❏ꜰʙᴠɪᴅᴇᴏ (ʟɪɴᴋ)
+┣❏ɪɢᴠɪᴅᴇᴏ (ʟɪɴᴋ)
+┣❏ᴛᴡɪᴛᴠɪᴅᴇᴏ (ʟɪɴᴋ)
+┣❏ᴍᴇᴅɪᴀꜰɪʀᴇ (ʟɪɴᴋ)
+┣❏ᴛɪᴋᴛᴏᴋᴠɪᴅᴇᴏ (ʟɪɴᴋ)
+┣❏ᴛɪᴋᴛᴏᴋᴀᴜᴅɪᴏ (ʟɪɴᴋ)
+┣❏song (ʟɪɴᴋ)
+┣❏ꜱᴍᴇᴍᴇ (text)
+┣❏ʏᴛᴍᴘ4 (ʟɪɴᴋ)
+┣❏ʏᴛᴍᴘ3 (ʟɪɴᴋ)
+┣❏ᴘɪɴᴛᴇʀᴇꜱᴛ (ᴛᴇxᴛ)
 ┣❏ᴄᴏᴜᴘʟᴇ (Qᴜᴇʀʏ)
 ┣❏ᴄᴏꜰꜰᴇ (Qᴜᴇʀʏ)
 ┗━━⊱` }, { quoted: m })
 }
 break
 case 'ownermenu': {
-haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/0aa0de71e866b3e9393ea.jpg' }, caption: `command : ${prefix}
-Total Pengguna Premium :  ${owner.length}
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/ec4ecf8a47786c825cacd.jpg' }, caption: `command : ${prefix}
+Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
-Runtime Bot : ${runtime(process.uptime())}
 
-*ʙᴏᴛ ʜᴡ ᴍᴏᴅꜱ ᴡᴀ ᴠ16*
+*S A N D A R U*
 ┏━━⊱
 ┣❏ɴᴏᴡᴀ (628xxx)
 ┣❏ᴠᴇʀɪꜰ@ (628xxx)
 ┣❏ᴋᴇɴᴏɴ (628xxx)
 ┣❏ᴀᴅᴅᴘʀᴇᴍ (628xxx)
 ┣❏ᴅᴇʟᴘʀᴇᴍ (628xxx)
-┣❏ꜱᴇᴛᴘᴘʙᴏᴛ (ɢᴀᴍʙᴀʀɴʏᴀ)
-┣❏ʙʟᴏᴄᴋ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ ɴʏᴀ)
-┣❏ᴜɴʙʟᴏᴄᴋ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ ɴʏᴀ)
+┣❏ꜱᴇᴛᴘᴘʙᴏᴛ (image)
+┣❏ʙʟᴏᴄᴋ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ)
+┣❏ᴜɴʙʟᴏᴄᴋ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ)
 ┣❏ꜱᴇᴛᴀᴅᴍɪɴ (Qᴜᴇʀʏ)
-┣❏ꜱᴇᴛᴄᴍᴅ (ʀᴇᴘʟʏ ꜱᴛɪᴄᴋᴇʀ ɴʏᴀ)
-┣❏ᴅᴇʟᴄᴍᴅ (ʀᴇᴘʟʏ ꜱᴛɪᴄᴋᴇʀ ɴʏᴀ)
+┣❏ꜱᴇᴛᴄᴍᴅ (ʀᴇᴘʟʏ ꜱᴛɪᴄᴋᴇʀ)
+┣❏ᴅᴇʟᴄᴍᴅ (ʀᴇᴘʟʏ ꜱᴛɪᴄᴋᴇʀ)
 ┣❏ɴꜱꜰᴡ (ᴏɴ/ᴏꜰꜰ)
-┣❏ᴀᴅᴅᴀᴘᴋ (ʀᴇᴘʟʏ ᴀᴘᴋ ɴʏᴀ)
-┣❏ᴅᴇʟᴀᴘᴋ (ʀᴇᴘʟʏ ᴀᴘᴋ ɴʏᴀ)
-┣❏ᴀᴅᴅᴢɪᴘ (ʀᴇᴘʟʏ ᴢɪᴘ ɴʏᴀ)
-┣❏ᴅᴇʟᴢɪᴘ (ʀᴇᴘʟʏ ᴢɪᴘ ɴʏᴀ)
-┣❏ᴀᴅᴅᴘᴅꜰ (ʀᴇᴘʟʏ ᴘᴅꜰ ɴʏᴀ)
-┣❏ᴅᴇʟᴘᴅꜰ (ʀᴇᴘʟʏ ᴘᴅꜰ ɴʏᴀ)
-┣❏ᴀᴅᴅᴠɴ (ʀᴇᴘʟʏ ᴠɴ ɴʏᴀ)
-┣❏ᴅᴇʟᴠɴ (ʀᴇᴘʟʏ ᴠɴ ɴʏᴀ)
-┣❏ꜱᴇɴᴅᴘᴅꜰ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ ɴʏᴀ)
-┣❏ꜱᴇɴᴅᴢɪᴘ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ ɴʏᴀ)
-┣❏ꜱᴇɴᴅᴀᴘᴋ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ ɴʏᴀ)
-┣❏ᴀᴅᴅᴍꜱɢ (ʀᴇᴘʟʏ ᴄʜᴀᴛ ɴʏᴀ)
+┣❏ᴀᴅᴅᴀᴘᴋ (ʀᴇᴘʟʏ ᴀᴘᴋ)
+┣❏ᴅᴇʟᴀᴘᴋ (ʀᴇᴘʟʏ ᴀᴘᴋ)
+┣❏ᴀᴅᴅᴢɪᴘ (ʀᴇᴘʟʏ ᴢɪᴘ)
+┣❏ᴅᴇʟᴢɪᴘ (ʀᴇᴘʟʏ ᴢɪᴘ)
+┣❏ᴀᴅᴅᴘᴅꜰ (ʀᴇᴘʟʏ ᴘᴅꜰ)
+┣❏ᴅᴇʟᴘᴅꜰ (ʀᴇᴘʟʏ ᴘᴅꜰ)
+┣❏ᴀᴅᴅᴠɴ (ʀᴇᴘʟʏ ᴠɴ)
+┣❏ᴅᴇʟᴠɴ (ʀᴇᴘʟʏ ᴠɴ)
+┣❏ꜱᴇɴᴅᴘᴅꜰ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ)
+┣❏ꜱᴇɴᴅᴢɪᴘ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ)
+┣❏ꜱᴇɴᴅᴀᴘᴋ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ)
+┣❏ᴀᴅᴅᴍꜱɢ (ʀᴇᴘʟʏ ᴄʜᴀᴛ)
 ┣❏ɢᴇᴛᴍꜱɢ (Qᴜᴇʀʏ)
-┣❏ᴅᴇʟᴍꜱɢ (ʀᴇᴘʟʏ ᴄʜᴀᴛ ɴʏᴀ)
-┣❏ꜱᴇɴᴅʟɪꜱᴛ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ ɴʏᴀ)
+┣❏ᴅᴇʟᴍꜱɢ (ʀᴇᴘʟʏ ᴄʜᴀᴛ)
+┣❏ꜱᴇɴᴅʟɪꜱᴛ (ʀᴇᴘʟʏ ᴏʀᴀɴɢ)
 ┗━━⊱` }, { quoted: m })
 }
 break
 case 'listmenu': {
-haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/0aa0de71e866b3e9393ea.jpg' }, caption: `command : ${prefix}
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/ec4ecf8a47786c825cacd.jpg' }, caption: `command : ${prefix}
 Total Pengguna Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
 Runtime Bot : ${runtime(process.uptime())}
@@ -2237,10 +2235,9 @@ Runtime Bot : ${runtime(process.uptime())}
 }
 break
 case 'groupmenu': {
-haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/0aa0de71e866b3e9393ea.jpg' }, caption: `command : ${prefix}
-Total Pengguna Premium :  ${owner.length}
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/ec4ecf8a47786c825cacd.jpg' }, caption: `command : ${prefix}
+Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
-Runtime Bot : ${runtime(process.uptime())}
 
 *ʙᴏᴛ ʜᴡ ᴍᴏᴅꜱ ᴡᴀ ᴠ16*
 ┏━━⊱
@@ -2249,25 +2246,23 @@ Runtime Bot : ${runtime(process.uptime())}
 ┣❏ᴘʀᴏᴍᴏᴛᴇ (628xx)
 ┣❏ᴅᴇᴍᴏᴛᴇ (628xx)
 ┣❏ᴋᴜᴅᴇᴛ (628xx)
-┣❏ɪɴꜱᴘᴇᴄᴛ (ʟɪɴᴋɴʏᴀ)
+┣❏ɪɴꜱᴘᴇᴄᴛ (ʟɪɴᴋ)
 ┣❏ꜱᴇɴᴅʟɪɴᴋɢᴄ (628xxx)
 ┣❏ʟɪɴᴋɢʀᴏᴜᴘ
 ┣❏ʀᴇꜱᴇᴛʟɪɴᴋɢᴄ
-┣❏ᴛᴀɢᴀʟʟ (ᴛᴇxᴛɴʏᴀ)
-┣❏ʜɪᴅᴇᴛᴀɢ (ᴛᴇxᴛɴʏᴀ)
+┣❏ᴛᴀɢᴀʟʟ (ᴛᴇxᴛ)
+┣❏ʜɪᴅᴇᴛᴀɢ (ᴛᴇxᴛ)
 ┣❏ɢʀᴏᴜᴘ (ᴏɴ/ᴏꜰꜰ)
-┣❏ꜱᴇᴛɴᴀᴍᴇ (ᴛᴇxᴛɴʏᴀ)
-┣❏ꜱᴇᴛᴅᴇꜱᴄ (ᴛᴇxᴛɴʏᴀ)
+┣❏ꜱᴇᴛɴᴀᴍᴇ (ᴛᴇxᴛ)
+┣❏ꜱᴇᴛᴅᴇꜱᴄ (ᴛᴇxᴛ)
 ┣❏ᴇᴅɪᴛɪɴꜰᴏ (ᴏɴ/ᴏꜰꜰ)
-┣❏ꜱᴇᴛᴘᴘɢʀᴏᴜᴘ (ɢᴀᴍʙᴀʀɴʏᴀ)
+┣❏ꜱᴇᴛᴘᴘɢʀᴏᴜᴘ (image)
 ┗━━⊱` }, { quoted: m })
 }
 break
 
-case 'sewa': {
-m.reply(`◎ © Hay Kak ${pushname} 👋 Selamat ${salam}
-
-Sewa Bot ? Hubungi Admin Untuk Nego Wa.me/6281214281312`)
+case 'dev': {
+m.reply(`Creater : *Wa.me/94764497078*`)
 }
 break
 
@@ -2423,7 +2418,7 @@ Runtime Bot : ${runtime(process.uptime())}
 🇲🇨 *Hello My Name Hw Mods Bot`}, { quoted: m })
 }
 break
-case 'bot': {
+case 'alive': {
 if (!isCreator) return
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -2431,8 +2426,8 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "product": {
 "productImage": messa.imageMessage,
 "productId": "449756950375071",
-"title": ` © Hay Kak ${pushname} 👋 Selamat ${salam} Apa Yang Bisa Saya Bantu 🙏`,
-"description": ` - © ʜᴡ ᴍᴏᴅꜱ ᴡᴀ -
+"title": ` Hey I am Alive Now`,
+"description": ` - sandaru -
 
 ◎ Owner : ${botname}
 ◎ Lib : Multi-Device
@@ -2445,10 +2440,10 @@ SILAHKAN KETIK MENU UNTUK MENGGUNAKAN BOT LEBIH LANJUT ✌️`,
 "productImageCount": 1,
 "firstImageId": 1,
 "salePriceAmount1000": "10000000",
-"retailerId": `© ʜᴡ ᴍᴏᴅꜱ ᴡᴀ WE ARE NOT MASTOD`,
+"retailerId": `Sandaru`,
 "url": "Wa.me/6285714170944"
 },
-"businessOwnerJid": "6285714170944@s.whatsapp.net",
+"businessOwnerJid": "94764497078@s.whatsapp.net",
 }
 }), { userJid: m.chat, quoted: m })
 haikal.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
@@ -2456,53 +2451,7 @@ haikal.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
 break
 //=================================================//
 case 'panel': {
-m.reply(`◎ © Hay Kak ${pushname} 👋 Selamat ${salam}
-
-*Pricelist Harga AmGeekz Panel* :
-
-⚡PAKET G1
-1GB RAM/1GB Disk/25% CPU
-Rp10.000,00/1 BULAN
-⚡PAKET G2
-2GB RAM/2GB Disk/50% CPU
-Rp15.000,00/1 BULAN
-⚡PAKET G3
-3GB RAM/3GB Disk/75% CPU
-Rp20.000,00/1 BULAN
-⚡PAKET G4
-4GB RAM/4GB Disk/100% CPU
-Rp25.000,00/1 BULAN
-⚡PAKET G5
-5GB RAM/5GB Disk/125% CPU
-Rp30.000,00/1 BULAN
-⚡PAKET G6
-6GB RAM/6GB Disk/150% CPU
-Rp35.000.00/1 BULAN
-⚡PAKET G7
-7GB RAM/7GB Disk/175% CPU
-Rp40.000.00/1 BULAN
-
----------------------------------------
-Pricelist Perpanjang Masa Aktif AmGeekz Panel :
-
-⚡PAKET G1 = Rp5.000
-⚡PAKET G2 = Rp7.500
-⚡PAKET G3 = Rp10.000
-⚡PAKET G4 = Rp12.500
-⚡PAKET G5 = Rp15.000
-⚡PAKET G6 = Rp17.500
-⚡PAKET G7 = Rp20.000
-
-Nb:
-Melakukan top up saldo artinya anda setuju dengan segala kebijakan kami.
-Untuk pricelist renew berlaku jika ada server yg masih aktif di dalam akun minimal selama 23hari.
-
-*[ Administrator]*
-contact.amgeekz.site
-Admin1 = 6285649455626
-Admin2 = 62895422836123
-Admin3 = 6281214281312
-`)
+m.reply(`Create Free Panel Account: *https://youtube.com/shorts/gLCeMCFwUeI?feature=share*`)
 }
 break
 //=================================================//
@@ -2521,25 +2470,41 @@ break
 //=================================================//
 
 case 'tutorial': {
-m.reply(`◎ © Hay Kak ${pushname} 👋 Selamat ${salam}
-Tutorial Run Via Panel
-https://youtu.be/rqqxkI4P8YY`)
+m.reply(`Comming Soon`)
 }
 break
 //=================================================//
 
 //=================================================//
-case 'infoamgeekz': {
-if (!m.isGroup) return m.reply('Buat Di Group Bodoh')
-haikal.sendMessage(from, { text : `◎ © Hay Kak ${pushname} 👋 Selamat ${salam}
+case 'support': {
+if (!isCreator) return
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hw.jpg') }, { upload: haikal.waUploadToServer })
+var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"productMessage": {
+"product": {
+"productImage": messa.imageMessage,
+"productId": "449756950375071",
+"title": ` https://chat.whatsapp.com/KA3BCwtC1Tg18krJACgGes`,
+"description": ` - sandaru -
 
-📮 _*Syarat & Ketentuan*_
+◎ Owner : ${botname}
+◎ Lib : Multi-Device
+◎ Terbit : *01-09-1999*
 
-1. _Fitur lupa password sudah bisa digunakan jadi pastikan email aktif kalian sudah di tambahkan di panel kami._
-2. _Selalu backup data_
-3. _Jangan beritahukan user password kepada orang lain ( kami tidak bertanggung jawab dengan hal ini )_
-
-_*sebelumnya kami mengalami kasus dimana user kami menjual akunnya ke orang lain dan selang beberapa hari meminta kami untuk reset password hal ini membuat nama panel kami dibilang scam untuk menanggulangi hal ini kami tidak akan lagi membantu melakukan reset password.*` , mentions: participants.map(a => a.id)}, { quoted:m })
+SILAHKAN KETIK MENU UNTUK MENGGUNAKAN BOT LEBIH LANJUT ✌️`,
+"currencyCode": "IDR",
+"footerText": ` `,
+"priceAmount1000": "10000000",
+"productImageCount": 1,
+"firstImageId": 1,
+"salePriceAmount1000": "10000000",
+"retailerId": `Sandaru`,
+"url": "Wa.me/6285714170944"
+},
+"businessOwnerJid": "94764497078@s.whatsapp.net",
+}
+}), { userJid: m.chat, quoted: m })
+haikal.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
 }
 break
 case 'redemcode': {
@@ -2937,20 +2902,20 @@ break
 
 
 //=================================================//
-case "fbvideo": case "fbreels":{
+case "fb": case "fbvideo":{
 if (!isCreator) return m.reply(mess.owner)
-if (!q) return m.reply('Link nya kak?\n\nContoh : .facebook https://www.facebook.com/reel/478437244198357')
-m.reply('Sabar Cuy Loading')
+if (!q) return m.reply('Link?\n\nEX : .facebook https://www.facebook.com/reel/478437244198357')
+m.reply('*Loading*')
 let res = await facebook(q)
-let ghd = await haikal.sendMessage(from,{video:{url: res.url[0].url},caption: "𝙎𝙪𝙠𝙨𝙚𝙨 ✅"},{quoted:m})
+let ghd = await haikal.sendMessage(from,{video:{url: res.url[0].url},caption: "DONE ✅"},{quoted:m})
 }
 break
 case "igvideo": case "igreels":{
 if (!isCreator) return m.reply(mess.owner)
-if (!q) return m.reply('Link nya kak?\n\nContoh : .instagram https://www.instagram.com/tv/CEjIHlnpyvI/?igshid=NTdlMDg3MTY=')
-m.reply('Sabar Cuy Loading')
+if (!q) return m.reply('Link?\n\nEX : .instagram https://www.instagram.com/tv/CEjIHlnpyvI/?igshid=NTdlMDg3MTY=')
+m.reply('Loading')
 let res = await instagram(q)
-let ghd = await haikal.sendMessage(from,{video:{url: res.url[0].url},caption: "𝙎𝙪𝙠𝙨𝙚𝙨 ✅"},{quoted:m})
+let ghd = await haikal.sendMessage(from,{video:{url: res.url[0].url},caption: "DONE ✅"},{quoted:m})
 }
 break
 case "twitvideo":{
@@ -2963,16 +2928,16 @@ let ghd = await haikal.sendMessage(from,{video:{url: res.url[0].url},caption: "�
 break
 case "tiktokvideo":{
 if (!isCreator) return m.reply(mess.owner)
-if (!q) return m.reply(`Link Nya Kak???\nContoh ${prefix+command} https://vm.tiktok.com/ZSRApJY1K/`)
-m.reply('Sabar Cuy Loading')
+if (!q) return m.reply(`Link???\nEx ${prefix+command} https://vm.tiktok.com/ZSRApJY1K/`)
+m.reply('Loading')
 let res = await tiktok(q)
-let ghd = await haikal.sendMessage(from,{video:{url: res.url[0].url},caption: "Sukses"},{quoted:m})
+let ghd = await haikal.sendMessage(from,{video:{url: res.url[0].url},caption: "DONE"},{quoted:m})
 }
 break
 case "tiktokaudio":{
 if (!isCreator) return m.reply(mess.owner)
-if (!q) return reply (`Link Nya Kak???\nContoh ${prefix+command} https://vm.tiktok.com/ZSRApJY1K/`)
-m.reply('Sabar Cuy Loading')
+if (!q) return reply (`Link?\nEx ${prefix+command} https://vm.tiktok.com/ZSRApJY1K/`)
+m.reply('Loading')
 let res = await tiktok(q)
 let ghd = await haikal.sendMessage(from,{audio:{url: res.url[1].url}, mimetype: "audio/mp4", ptt:false},{quoted:m})
 }
@@ -2980,7 +2945,7 @@ break
 // CASE UNTUK FITURE DOWNLOAD
 case 'youtube': {
 if (args.length < 2) return m.reply(`Kirim perintah ${command} query\nContoh : ${command} monokrom`)
-m.reply('Sabar Cuy Loading')
+m.reply('Loading')
 await sendPlay(from, q)
 }
 break
