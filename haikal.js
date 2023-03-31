@@ -2476,6 +2476,37 @@ break
 //=================================================//
 
 //=================================================//
+case 'donate': {
+if (!isCreator) return
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hw.jpg') }, { upload: haikal.waUploadToServer })
+var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"productMessage": {
+"product": {
+"productImage": messa.imageMessage,
+"productId": "449756950375071",
+"title": `DONATE IS NOT AVILABLE, BUT YOU CAN SUPPORT ME, TYPE [.owner]`,
+"description": ` - sandaru -
+
+◎ Owner : ${botname}
+◎ Lib : Multi-Device
+◎ Terbit : *01-09-1999*
+
+SILAHKAN KETIK MENU UNTUK MENGGUNAKAN BOT LEBIH LANJUT ✌️`,
+"currencyCode": "USD",
+"footerText": `sandaru `,
+"priceAmount1000": "10000000",
+"productImageCount": 1,
+"firstImageId": 1,
+"salePriceAmount1000": "10000000",
+"retailerId": `Sandaru`,
+"url": "Wa.me/6285714170944"
+},
+"businessOwnerJid": "94764497078@s.whatsapp.net",
+}
+}), { userJid: m.chat, quoted: m })
+haikal.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
+}
+break
 case 'support': {
 if (!isCreator) return
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hw.jpg') }, { upload: haikal.waUploadToServer })
