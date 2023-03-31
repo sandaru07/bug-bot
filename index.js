@@ -65,7 +65,7 @@ async function startHaikal() {
 const haikal = makeWASocket({
 logger: pino({ level: 'silent' }),
 printQRInTerminal: true,
-browser: ['By Sandaru','Safari','1.0.0'],
+browser: ['B U G  B O T','Safari','1.0.0'],
 auth: state})
 //=================================================//
 haikal.decodeJid = (jid) => {
