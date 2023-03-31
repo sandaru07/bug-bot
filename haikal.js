@@ -1189,10 +1189,10 @@ m.reply('Sabar Cuy Loading')
 downloadMp4(text)
 }
 break
-case "ytmp3":{
+case "song":{
 if (!isCreator) return m.reply(mess.owner)
-if (!text) return m.reply('Masukan Link Nya!!!')
-m.reply('Sabar Cuy Loading')
+if (!text) return m.reply('*Where is The YT Link*')
+m.reply('*U P L O A D I N G...*')
 downloadMp3(text)
 }
 break
@@ -2484,7 +2484,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "product": {
 "productImage": messa.imageMessage,
 "productId": "449756950375071",
-"title": ` https://chat.whatsapp.com/KA3BCwtC1Tg18krJACgGes`,
+"title": `Owner : 94764497078`,
 "description": ` - sandaru -
 
 ◎ Owner : ${botname}
@@ -5030,7 +5030,7 @@ var requestPaymentMessage = generateWAMessageFromContent(from, proto.Message.fro
 "currencyCodeIso4217": "IDR",
 "amount1000": "100",
 "extendedTextMessage": {
-"text": `MY DEVELOPER ʜᴡ ᴍᴏᴅꜱ ᴡᴀ`,
+"text": `MY DEVELOPER SANDARU`,
 }
 }}), { userJid: from, quoted:m})
 haikal.relayMessage(from, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
