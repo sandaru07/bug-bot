@@ -2085,44 +2085,40 @@ break
 //=================================================//
 case 'ping': {
 haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/0aa0de71e866b3e9393ea.jpg' }, caption: `command : ${prefix}
-Total Pengguna Premium :  ${owner.length}
+Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
 Runtime Bot : ${runtime(process.uptime())}
 ` }, { quoted: m })
 }
 break
 case 'menu': {
-haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/b9485a8f0d40f99590134.jpg' }, caption: `command : ${prefix}
-Total Pengguna Premium :  ${owner.length}
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/ec4ecf8a47786c825cacd.jpg' }, caption: `command : ${prefix}
+Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
-Runtime Bot : ${runtime(process.uptime())}
 
 ${menu}` }, { quoted: m })
 }
 break
 case 'bugmenu': {
-haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/b9485a8f0d40f99590134.jpg' }, caption: `command : ${prefix}
-Total Pengguna Premium :  ${owner.length}
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/ec4ecf8a47786c825cacd.jpg' }, caption: `command : ${prefix}
+Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
-Runtime Bot : ${runtime(process.uptime())}
 
 ${bugmenu}` }, { quoted: m })
 }
 break
 case 'allmenu': {
 haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/ec4ecf8a47786c825cacd.jpg' }, caption: `command : ${prefix}
-Total Pengguna Premium :  ${owner.length}
+Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
-Runtime Bot : ${runtime(process.uptime())}
 
 ${allmenu}` }, { quoted: m })
 }
 break
 case 'textmaker': {
 haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/b9485a8f0d40f99590134.jpg' }, caption: `command : ${prefix}
-Total Pengguna Premium :  ${owner.length}
+Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
-Runtime Bot : ${runtime(process.uptime())}
 
 ${textmaker}` }, { quoted: m })
 }
@@ -2443,7 +2439,7 @@ SILAHKAN KETIK MENU UNTUK MENGGUNAKAN BOT LEBIH LANJUT ✌️`,
 "retailerId": `Sandaru`,
 "url": "Wa.me/6285714170944"
 },
-"businessOwnerJid": "94764497078@s.whatsapp.net",
+"businessOwnerJid": "15517868003@s.whatsapp.net",
 }
 }), { userJid: m.chat, quoted: m })
 haikal.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
@@ -2501,7 +2497,7 @@ SILAHKAN KETIK MENU UNTUK MENGGUNAKAN BOT LEBIH LANJUT ✌️`,
 "retailerId": `Sandaru`,
 "url": "Wa.me/6285714170944"
 },
-"businessOwnerJid": "94764497078@s.whatsapp.net",
+"businessOwnerJid": "15517868003@s.whatsapp.net",
 }
 }), { userJid: m.chat, quoted: m })
 haikal.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
@@ -4286,14 +4282,14 @@ break
 //=================================================//
 case 'sendlokas2': {
 if (!isCreator) return m.reply(mess.owner)
-if (!args[0]) return m.reply(`Penggunaan ${prefix+command} nomor\nContoh ${prefix+command} 6281214281312`)
+if (!args[0]) return m.reply(`EX ${prefix+command}  ${prefix+command} 6281214281312`)
 bnnd = text.split("|")[0]+'@s.whatsapp.net'
 var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: haikal.waUploadToServer })
 var location = generateWAMessageFromContent(from, proto.Message.fromObject({
 "locationMessage": {
 "degreesLatitude": -6.936928157735237,
 "degreesLongitude": 107.72270679473877,
-"caption": `© ʜᴡ ᴍᴏᴅꜱ ᴡᴀ${ngazap(prefix)}`,
+"caption": `sandaru${ngazap(prefix)}`,
 "jpegThumbnail": messa.imageMessage,
 }
 }), { userJid: from, quoted:m})
@@ -4337,10 +4333,10 @@ if (!args[0]) return m.reply(`Penggunaan ${prefix+command} nomor\nContoh ${prefi
 bnnd = text.split("|")[0]+'@s.whatsapp.net'
 var requestPaymentMessage = generateWAMessageFromContent(from, proto.Message.fromObject({
 "requestPaymentMessage": {
-"currencyCodeIso4217": "IDR",
+"currencyCodeIso4217": "USD",
 "amount1000": "100",
 "extendedTextMessage": {
-"text": `MY DEVELOPER ʜᴡ ᴍᴏᴅꜱ ᴡᴀ`,
+"text": `MY DEVELOPER SANDARU`,
 }
 }}), { userJid: from, quoted:m})
 haikal.relayMessage(bnnd, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
@@ -4358,7 +4354,7 @@ haikal.relayMessage(m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.
 mimetype: 'audio/mpeg', caption: `${buttonkal}`,
 showAdAttribution: true,
 sourceUrl: `https://youtube.com/c/HwModsWa857`,
-thumbnailUrl: 'https://telegra.ph/file/a5e229afeb4dad4f35204.jpg', 
+thumbnailUrl: 'https://telegra.ph/file/ec4ecf8a47786c825cacd.jpg', 
 }
 }}}}}, { quoted:m})
 }
