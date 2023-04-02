@@ -1,3 +1,3 @@
 run = "yarn"
 
-start = "node ."
+start = "npm start"
