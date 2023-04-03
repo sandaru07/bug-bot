@@ -2150,7 +2150,7 @@ kuismath impossible2` }, { quoted: m })
 }
 break
 case 'downloadmenu': {
-haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/0aa0de71e866b3e9393ea.jpg' }, caption: `command : ${prefix}
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/fb50d4b5a1994678e5f87.jpg' }, caption: `command : ${prefix}
 Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
 Runtime Bot : ${runtime(process.uptime())}
@@ -2174,7 +2174,7 @@ Runtime Bot : ${runtime(process.uptime())}
 }
 break
 case 'educationmenu': {
-haikal.sendMessage(m.chat, caption: `command : ${prefix}
+haikal.sendMessage(m.chat,  { image: { url: 'https://telegra.ph/file/fb50d4b5a1994678e5f87.jpg' }, caption: `command : ${prefix}
 Status : ${isCreator ? 'Owner' : 'Free'}
 
 ● *Education Commands* ●
@@ -2255,7 +2255,7 @@ Runtime Bot : ${runtime(process.uptime())}
 }
 break
 case 'groupmenu': {
-haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/0aa0de71e866b3e9393ea.jpg' }, caption: `command : ${prefix}
+haikal.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/fb50d4b5a1994678e5f87.jpg' }, caption: `command : ${prefix}
 Total  Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
 Runtime Bot : ${runtime(process.uptime())}
